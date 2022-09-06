@@ -98,8 +98,11 @@ while True:
 
 	screen.fill(WHITE)
 	for lin in p:
-		# pygame.draw.circle(screen, BLACK, lin.get_pos(), 2)
+		# pygame.draw.circle(screen, BLACK, lin.get_pos(), 2
 		pass	
 	for i in range(len(p)-1):
 		pygame.draw.line(screen,BLACK, p[i].get_pos(), p[i+1].get_pos())
 	pygame.display.update()  # Or pygame.display.flip()
+
+	
+	#test
