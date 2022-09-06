@@ -11,6 +11,7 @@ WHITE = (255, 255, 255)
 
 p = []
 stationary = [0,50,95,96,97,98,99,100,101,490,491,492,493,494,495,496,497,498,499,500,501]
+#stationary = [0,501]
 for x in range(501):
 	p.append(Link([20+0.001*x + 300,180],[40,-40]))
 
@@ -88,13 +89,14 @@ while True:
 			elif event.key == pygame.K_s:
 				p.pop(-1)
 			elif event.key == pygame.K_UP:
-				p[-1].set_pos([p[-1].get_pos()[0], p[-1].get_pos()[1] - 10])
+				p[-1].set_pos([p[0].get_pos()[0], p[0].get_pos()[1] - 10])
 			elif event.key == pygame.K_DOWN:
-				p[-1].set_pos([p[-1].get_pos()[0], p[-1].get_pos()[1] + 10])
+				p[-1].set_pos([p[0].get_pos()[0], p[0].get_pos()[1] + 10])
 			elif event.key == pygame.K_LEFT:
-				p[-1].set_pos([p[-1].get_pos()[0] - 10, p[-1].get_pos()[1]])
+				p[-1].set_pos([p[0].get_pos()[0] - 10, p[0].get_pos()[1]])
 			elif event.key == pygame.K_RIGHT:
-				p[-1].set_pos([p[-1].get_pos()[0] + 10, p[-1].get_pos()[1]])
+				p[-1].set_pos([p[0].get_pos()[0] + 10, p[0].get_pos()[1]])
+			
 
 	screen.fill(WHITE)
 	for lin in p:
