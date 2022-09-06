@@ -88,13 +88,13 @@ while True:
 			elif event.key == pygame.K_s:
 				p.pop(-1)
 			elif event.key == pygame.K_UP:
-				p[-1].set_pos([p[-1].get_pos()[0], p[-1].get_pos()[1] - 3])
+				p[-1].set_pos([p[-1].get_pos()[0], p[-1].get_pos()[1] - 10])
 			elif event.key == pygame.K_DOWN:
-				p[-1].set_pos([p[-1].get_pos()[0], p[-1].get_pos()[1] + 3])
+				p[-1].set_pos([p[-1].get_pos()[0], p[-1].get_pos()[1] + 10])
 			elif event.key == pygame.K_LEFT:
-				p[-1].set_pos([p[-1].get_pos()[0] - 3, p[-1].get_pos()[1]])
+				p[-1].set_pos([p[-1].get_pos()[0] - 10, p[-1].get_pos()[1]])
 			elif event.key == pygame.K_RIGHT:
-				p[-1].set_pos([p[-1].get_pos()[0] + 3, p[-1].get_pos()[1]])
+				p[-1].set_pos([p[-1].get_pos()[0] + 10, p[-1].get_pos()[1]])
 
 	screen.fill(WHITE)
 	for lin in p:
